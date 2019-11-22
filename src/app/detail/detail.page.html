@@ -11,17 +11,18 @@
 
   <ion-list>
     <ion-item>
-      <ion-label slot="start">Title</ion-label>
-      <ion-input type="text" [ngModel]="note.title"></ion-input>
+      <ion-label position="floating">Title</ion-label>
+      <ion-input type="text" [(ngModel)]="note.title"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label slot="start">Description</ion-label>
-      <ion-textarea [ngModel]="note.description" ></ion-textarea>
+      <ion-label position="floating">Description</ion-label>
+      <ion-textarea [(ngModel)]="note.description"></ion-textarea>
     </ion-item>
   </ion-list>
 
-  <div padding>
-    <ion-button float-end shape="round">Save</ion-button>
+  <div ion-padding>
+    <ion-button expand="block" fill="outline" (click)="saveNote()">Save</ion-button>
+    <ion-button *ngIf="note.id != null" expand="block" fill="outline" (click)="deleteNote()" color="danger">Delete</ion-button>
   </div>
 
 </ion-content>

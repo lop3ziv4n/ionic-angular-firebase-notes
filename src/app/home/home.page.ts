@@ -11,12 +11,18 @@ export class HomePage {
 
     notes = [];
 
-    constructor(notesServices: NoteServices, public navController: NavController) {
-        this.notes = notesServices.getAll();
+    constructor(private notesServices: NoteServices, private navController: NavController) {
+        notesServices.getAll().subscribe((values) => {
+            this.notes = values;
+        });
     }
 
     goToDetail(id: number) {
         this.navController.navigateForward(`/detail/${id}`);
+    }
+
+    createNote() {
+        this.navController.navigateForward(`/detail/`);
     }
 
 }

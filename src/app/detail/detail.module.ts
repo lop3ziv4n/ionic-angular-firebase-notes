@@ -1,13 +1,10 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
+import { DetailPageRoutingModule } from './detail-routing.module';
 
-import {IonicModule} from '@ionic/angular';
-
-import {DetailPageRoutingModule} from './detail-routing.module';
-
-import {DetailPage} from './detail.page';
-import {NoteServices} from '../../services/note.services';
+import { DetailPage } from './detail.page';
 
 @NgModule({
     imports: [
@@ -16,8 +13,7 @@ import {NoteServices} from '../../services/note.services';
         IonicModule,
         DetailPageRoutingModule
     ],
-    declarations: [DetailPage],
-    providers: [NoteServices]
+    declarations: [DetailPage]
 })
 export class DetailPageModule {
 }
