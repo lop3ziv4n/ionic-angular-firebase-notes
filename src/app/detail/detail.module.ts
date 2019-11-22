@@ -1,10 +1,12 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {IonicModule} from '@ionic/angular';
 import {FormsModule} from '@angular/forms';
-import {RouterModule} from '@angular/router';
 
-import {HomePage} from './home.page';
+import {IonicModule} from '@ionic/angular';
+
+import {DetailPageRoutingModule} from './detail-routing.module';
+
+import {DetailPage} from './detail.page';
 import {NoteServices} from '../../services/note.services';
 
 @NgModule({
@@ -12,15 +14,10 @@ import {NoteServices} from '../../services/note.services';
         CommonModule,
         FormsModule,
         IonicModule,
-        RouterModule.forChild([
-            {
-                path: '',
-                component: HomePage
-            }
-        ])
+        DetailPageRoutingModule
     ],
-    declarations: [HomePage],
+    declarations: [DetailPage],
     providers: [NoteServices]
 })
-export class HomePageModule {
+export class DetailPageModule {
 }

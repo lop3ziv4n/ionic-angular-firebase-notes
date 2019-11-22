@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-label slot="start">Title</ion-label>
+      <ion-input type="text" [ngModel]="note.title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label slot="start">Description</ion-label>
+      <ion-textarea [ngModel]="note.description" ></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <ion-button float-end shape="round">Save</ion-button>
+  </div>
+
+</ion-content>
